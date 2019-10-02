@@ -28,3 +28,17 @@
         display: none;
     }
 }
+
+.profile_image {
+    width: 200px;
+    height: 250px;
+}
+
+.jumbotron {
+    background-image: url(./coffee-2242213_1920.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    width: 100%;
+    height: 100%;
+}
