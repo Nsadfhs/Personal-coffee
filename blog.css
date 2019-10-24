@@ -5,7 +5,7 @@ html {
 
 html a {
     text-decoration: none;
-    font-family: 'Kirang Haerang', cursive;
+    font-family: 'Jua', cursive;
 }
 
 html ul,
@@ -45,8 +45,13 @@ html li {
 }
 
 .profile_image {
-    width: 200px;
+    width: 330px;
     height: 250px;
+}
+
+.profile_member {
+    width: 180px;
+    height: 180px;
 }
 
 .jumbotron {
@@ -81,4 +86,16 @@ h1 {
 
 .etch-row-padding img {
     margin-bottom: 12px
+}
+
+.d-sm-row img {
+    width: 200px;
+    height: 250px;
+}
+
+@media screen and (max-width:993px) {
+    .d-sm-row img {
+        width: 330px;
+        height: 250px;
+    }
 }

@@ -14,33 +14,30 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Jua|Kirang+Haerang|Yeon+Sung&display=swap" rel="stylesheet">
-    <!-- Custom styles for this template -->
     <link href="blog.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav class="etch-sidebar etch-black etch-animate-top etch-xxlarge" style="display:none;padding-top:50px;" id="mySidebar">
-        <a href="javascript:void(0)" onclick="w3_close()" class="etch-button etch-black etch-xxlarge etch-padding etch-display-topright" style="padding:6px 24px">
+    <nav class="etch-sidebar etch-black etch-animate-top etch-xxlarge" style="display:none;padding:35px;" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="etch-button etch-black etch-xlarge etch-padding etch-display-topright" style="padding:6px 24px">
             <i class="fa fa-remove"></i>
         </a>
         <div class="etch-bar-block etch-center">
             <a href="./personal.html" class="etch-bar-item etch-button etch-text-grey etch-hover-black">Home</a>
             <a href="./kim_portfolio.html" class="etch-bar-item etch-button etch-text-grey etch-hover-black">Photos</a>
-            <a href="#" class="etch-bar-item etch-button etch-text-grey etch-hover-black">Shop</a>
+            <a href="./personal_edu.html" class="etch-bar-item etch-button etch-text-grey etch-hover-black">Videos</a>
+            <a href="./jeong_portfolio.html" class="etch-bar-item etch-button etch-text-grey etch-hover-black">Blog</a>
+            <a href="./personal_shop.html" class="etch-bar-item etch-button etch-text-grey etch-hover-black">Shop</a>
         </div>
     </nav>
     <div class="container">
         <header class="blog-header py-3">
             <div class="row flex-nowrap justify-content-between align-items-center">
-                <div class="col-5">
-
-                </div>
-                <div class="col-4 justify-content-center">
+                <div class="col-4 justify-content-start">
                     <h1 class="blog-header-logo text-dark" href="#">Personal</h1>
                 </div>
-                <div class="col-3 justify-content-end">
+                <div class="col-4 justify-content-end">
                     <span class="etch-button etch-xxlarge etch-white etch-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
                     <div class="etch-clear"></div>
                 </div>
@@ -48,61 +45,147 @@
         </header>
 
         <div class="nav-scroller py-1 mb-2">
-            <nav class="nav d-flex justify-content-between">
+            <nav onclick="document.getElementById('mission').style.display='block'" class="nav d-flex justify-content-between">
                 <a class="p-2 text-muted" href="#">World</a>
-                <a class="p-2 text-muted" href="#">Interior</a>
+                <a class="p-2 text-muted" href="#">Coffee</a>
+                <a class="p-2 text-muted" href="#">Creative</a>
                 <a class="p-2 text-muted" href="#">Design</a>
                 <a class="p-2 text-muted" href="#">Culture</a>
-                <a class="p-2 text-muted" href="#">Business</a>
-                <a class="p-2 text-muted" href="#">Coffee</a>
-                <a class="p-2 text-muted" href="#">Beverage</a>
-                <a class="p-2 text-muted" href="#">edu</a>
-                <a class="p-2 text-muted" href="#">Style</a>
                 <a class="p-2 text-muted" href="#">Cafe</a>
+                <a class="p-2 text-muted" href="#">Beverage</a>
+                <a class="p-2 text-muted" href="#">Edu</a>
+                <a class="p-2 text-muted" href="#">Style</a>
+                <a class="p-2 text-muted" href="#">Business</a>
             </nav>
+            <div id="mission" class="etch-modal">
+                <div class="etch-modal-content etch-card-4 etch-animate-zoom">
+                    <header class="etch-container etch-padding-16 etch-blue">
+                        <span onclick="document.getElementById('mission').style.display='none'" class="etch-button etch-blue etch-xxlarge etch-display-topright">&times;</span>
+                        <h1>퍼스널의 다짐</h1>
+                    </header>
+
+                    <div class="etch-bar etch-border-bottom">
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'World')">World</button>
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'Interior')">Interior</button>
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'Design')">Design</button>
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'Culture')">Culture</button>
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'Coffee')">Coffee</button>
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'Business')">Business</button>
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'Beverage')">Beverage</button>
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'Edu')">Edu</button>
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'Style')">Style</button>
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'Cafe')">Cafe</button>
+                        <button class="tablink etch-bar-item etch-button" onclick="openMission(event, 'Creative')">Creative</button>
+                    </div>
+
+                    <div id="World" class="etch-container etch-section mission">
+                        <h1>세계화</h1>
+                        <p>퍼스널의 세계화를 위하여 전심전념할 것을 다짐합니다.</p>
+                        <p>we are the world</p>
+                    </div>
+                    <div id="Interior" class="etch-container etch-section mission">
+                        <h1>카페 실내</h1>
+                        <p>카페에서 커피의 맛을 결정하는 부분은 아주 많습니다. 원두의 품질은 당연한 것이기에...</p>
+                        <p>퍼스널만의 차별화 된 카페인테리어와 분위기를 조성할 것을 장담합니다.</p>
+                    </div>
+                    <div id="Design" class="etch-container etch-section mission">
+                        <h1>디자인</h1>
+                        <p>단순히 카페 디자인만을 고려하는 것이 아닌, </p>
+                        <p>사업적 디자인, 음료의 보임새와 커피 맛과 향의 컨셉디자인도 고려하겠습니다.</p>
+                    </div>
+                    <div id="Culture" class="etch-container etch-section mission">
+                        <h1>문화</h1>
+                        <우리나라만의>상업화된 악습을 버리고, 올바른 커피 문화를 정착시킴과 동시에, 퍼스널만의 좋은 커피 문화를 트렌드화 시키는데 앞장서겠습니다.</p>
+                    </div>
+                    <div id="Coffee" class="etch-container etch-section mission">
+                        <h1>커피</h1>
+                        <p>커피의 맛과 향, 품질을 향상시키기 위해 항상 노력하겠습니다.</p>
+                    </div>
+                    <div id="Business" class="etch-container etch-section mission">
+                        <h1>필연적 사업성</h1>
+                        <p>저희 퍼스널은 꿈과 열정만으로 사람과 커피, 아이디어를 망가뜨리지 않습니다.</p>
+                        <p>필연적으로 사업성을 가지고 점차 진보할 것입니다.</p>
+                    </div>
+                    <div id="Beverage" class="etch-container etch-section mission">
+                        <h1>음료</h1>
+                        <p>바리스타의 어원대로, 커피만이 아닌 바내에서 주문되는 모든 음료(alcohol / nonalcohol)를 다룰 줄 아는 바리스타가 되겠습니다.</p><br>
+                    </div>
+                    <div id="Edu" class="etch-container etch-section mission">
+                        <h1>교육</h1>
+                        <p>커피시장의 확대와 더불어 커피시장의 유능한 인재의 도입에 힘쓰겠습니다.</p>
+                    </div>
+                    <div id="Style" class="etch-container etch-section mission">
+                        <h1>퍼스널스타일</h1>
+                        <p>퍼스널만의 독특한 스타일(사업모델, 근무환경, 복지, 품질등등)을 널리 알리겠습니다.</p>
+                    </div>
+                    <div id="Cafe" class="etch-container etch-section mission">
+                        <h1>카페</h1>
+                        <p>커피의 맛과 향, 품질을 향상시키기 위해 항상 노력하겠습니다.</p><br>
+                    </div>
+                    <div id="Creative" class="etch-container etch-section mission">
+                        <h1>창의성</h1>
+                        <p>창의성과 창조력을 가지고 항상 실용적이고, 감각적인 아이템들로 미래를 준비하겠습니다.</p><br>
+                    </div>
+                    <div class="etch-container etch-light-grey etch-padding">
+                        <button class="etch-button etch-right etch-white etch-border" onclick="document.getElementById('id01').style.display='none'">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
             <div class="col-md-6 px-0">
                 <h1 class="display-4 font-italic">Enjoy your own COFFEE, In Personal! </h1>
                 <p class="lead my-3">카페 퍼스널에서 여러분들만의 커피를 즐기세요</p>
-                <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">커피관련 정보를 얻으세요!</a></p>
+                <p class="lead mb-0"><a href="personal_blog.html" class="text-white font-weight-bold">커피관련 정보를 얻으세요!</a></p>
             </div>
         </div>
-
+        <h3 class="pb-4 mb-4 font-italic border-bottom">
+            We are..... Personal BaristA
+        </h3>
         <div class="row mb-2">
             <div class="col-md-6">
                 <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col-auto d-sm-row d-lg-block">
+                        <img class="profile_image" src="https://raw.githubusercontent.com/Nsadfhs/webResume/master/images/jeong.jpg" alt="">
+                    </div>
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-primary">정다운</strong>
                         <h3 class="mb-0">Manager</h3>
                         <div class="mb-1 text-muted">1995.05.30</div>
                         <p class="card-text mb-auto">수 인 사 대 전 명(修 人 事 待 錢 命)</p>
                         <p class="card-text mb-auto">사람으로서의 일을 다하고 돈의 뜻을 기다린다.</p>
-                        <footer class="etch-center etch-opacity etch-xlarge">
-                            <i class="fa fa-facebook-official etch-hover-opacity"><a href="https://www.facebook.com/profile.php?id=100006499487744" class="stretched-link"></a></i>
-                            <i class="fa fa-instagram etch-hover-opacity"><a href="https://www.instagram.com/?hl=ko" class="stretched-link"></a></i>
+                        <footer class="etch-center etch-opacity etch-xxlarge">
+                            <span>
+                                    <a href="https://m.facebook.com/profile.php?id=100006499487744&refsrc=https%3A%2F%2Fm.facebook.com%2Ffbrdr%2F2048%2F100004547674123%2F&_rdr" ><i class="fa fa-facebook-official etch-hover-opacity" style="cursor: pointer;"></i></a>
+                            </span>
+                            <span>
+        <a href="https://www.instagram.com/nsadfhs/" > <i class="fa fa-instagram etch-hover-opacity" style="cursor: pointer;"></i></a>
+</span>
                         </footer>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <img class="profile_image" src="https://raw.githubusercontent.com/Nsadfhs/webResume/master/images/jeong-min.jpg" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+
+                    <div class="col-auto d-sm-row d-lg-block">
+                        <img class="profile_image" src="./images/faces/KakaoTalk_20191001_133838995.jpg" alt="Ken Jay Kim">
+                    </div>
                     <div class="col p-4 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-success">김정호</strong>
                         <h3 class="mb-0">Head Barista</h3>
                         <div class="mb-1 text-muted">1996.08.21</div>
                         <p class="mb-auto">꿈을 꾼다는 건 살아있음을 의미하고, 꿈을 위해 노력한다는 건 살아 간다는 걸 의미한다.</p>
-                        <footer class="etch-center etch-opacity etch-xlarge">
-                            <i class="fa fa-facebook-official etch-hover-opacity"><a href="" class="stretched-link"></a></i>
-                            <i class="fa fa-instagram etch-hover-opacity"><a href="https://www.instagram.com/?hl=ko" class="stretched-link"></a></i>
+                        <footer class="etch-center etch-opacity etch-xxlarge">
+                            <span>
+                                        <a href="https://www.facebook.com/people/Barista-Jay-Kim/100004547674123" ><i class="fa fa-facebook-official etch-hover-opacity" style="cursor: pointer;"></i></a>
+                                </span>
+                            <span>
+            <a href="https://www.instagram.com/barista_jay_kim/?hl=ko"> <i class="fa fa-instagram etch-hover-opacity" style="cursor: pointer;"></i></a>
+    </span>
+
                         </footer>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
-                        <img class="profile_image" src="./images/KakaoTalk_20191001_133838995.jpg" alt="Ken Jay Kim">
                     </div>
                 </div>
             </div>
@@ -112,19 +195,20 @@
     <main role="main" class="container">
         <div class="row">
             <div class="col-md-8 blog-main">
-                <h3 class="pb-4 mb-4 font-italic border-bottom">
-                    We are..... Personal BaristA
-                </h3>
+
 
                 <div class="blog-post">
                     <h2 class="blog-post-title">창립 이념</h2>
-                    <p class="blog-post-meta">January 1, 2015 by <a href="#">Jeong Doe</a></p>
+                    <p class="blog-post-meta">January 1, 2015 by <a href="https://www.instagram.com/nsadfhs/">Jeong Doe</a>, <a href="https://www.instagram.com/barista_jay_kim/?hl=ko">Ken Jay Kim</a>
+                    </p>
                     <hr>
                     <div class="etch-container">
-                        <blockquote>
-                            <p><strong>Let's know and drink, enjoy properly</strong></p>
-                            <p>커피를 제대로 알고 즐기자</p>
-                        </blockquote>
+                        <div class="etch-panel etch-jumbo etch-black">
+                            <blockquote>
+                                <p class="etch-text-amber">커피를 제대로 알고 즐기자</p>
+                                <h5>Let's know and drink, enjoy properly</h5>
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
                 <div class="blog-post">
@@ -136,6 +220,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <h2>cupping</h2>
+                                <br>
                                 <p>커피의 맛과 질을 위해 신선한 원두를 항상 테스트합니다.</p>
                                 <p><a class="btn btn-secondary" href="./coffee_shop.html" role="button">View details &raquo;</a></p>
                             </div>
@@ -163,17 +248,44 @@
                     <p class="blog-post-meta">저희 퍼스널을 위해 모여준 팀원들 입니다.</p>
                     <hr>
                     <div class="etch-container etch-row etch-padding etch-center">
-                        <div class="etch-third">
-                            <img src="https://raw.githubusercontent.com/Nsadfhs/webResume/master/images/jeong-min.jpg" class="etch-circle etch-margin-bottom" alt="Random Name" style="width:90%">
+                        <div class="etch-third etch-section">
+                            <img src="./images/faces/man-161282_1280.png" class="etch-circle etch-margin-bottom profile_member" alt="Random Name">
                             <p>Name</p>
+                            <footer class="etch-center etch-opacity etch-xlarge">
+                                <span>
+                                                <a href="https://www.facebook.com/people/Barista-Jay-Kim/100004547674123" ><i class="fa fa-facebook-official etch-hover-opacity" style="cursor: pointer;"></i></a>
+                                        </span>
+                                <span>
+                    <a href="https://www.instagram.com/barista_jay_kim/?hl=ko"> <i class="fa fa-instagram etch-hover-opacity" style="cursor: pointer;"></i></a>
+            </span>
+
+                            </footer>
                         </div>
-                        <div class="etch-third">
-                            <img src="https://raw.githubusercontent.com/Nsadfhs/webResume/master/images/jeong-min.jpg" class="etch-circle etch-margin-bottom" alt="Random Name" style="width:90%">
+                        <div class="etch-third etch-section">
+                            <img src="./images/faces/man-161282_1280.png" class="etch-circle etch-margin-bottom profile_member" alt="Random Name">
                             <p>Name</p>
+                            <footer class="etch-center etch-opacity etch-xlarge">
+                                <span>
+                                                <a href="https://www.facebook.com/people/Barista-Jay-Kim/100004547674123" ><i class="fa fa-facebook-official etch-hover-opacity" style="cursor: pointer;"></i></a>
+                                        </span>
+                                <span>
+                    <a href="https://www.instagram.com/barista_jay_kim/?hl=ko"> <i class="fa fa-instagram etch-hover-opacity" style="cursor: pointer;"></i></a>
+            </span>
+
+                            </footer>
                         </div>
-                        <div class="etch-third">
-                            <img src="https://raw.githubusercontent.com/Nsadfhs/webResume/master/images/jeong-min.jpg" class="etch-circle etch-margin-bottom" alt="Random Name" style="width:90%">
+                        <div class="etch-third etch-section">
+                            <img src="./images/faces/man-161282_1280.png" class="etch-circle etch-margin-bottom profile_member" alt="Random Name">
                             <p>Name</p>
+                            <footer class="etch-center etch-opacity etch-xlarge">
+                                <span>
+                                                <a href="https://www.facebook.com/people/Barista-Jay-Kim/100004547674123" ><i class="fa fa-facebook-official etch-hover-opacity" style="cursor: pointer;"></i></a>
+                                        </span>
+                                <span>
+                    <a href="https://www.instagram.com/barista_jay_kim/?hl=ko"> <i class="fa fa-instagram etch-hover-opacity" style="cursor: pointer;"></i></a>
+            </span>
+
+                            </footer>
                         </div>
                     </div>
                 </div>
@@ -192,21 +304,9 @@ September
 October
 November
 December -->
-                <hr>
-                <div class="blog-post">
-                    <h2 class="blog-post-title">김정호 바리스타의 추천 메뉴</h2>
-                    <p class="blog-post-meta">February 23, 2019 by <a href="https://www.instagram.com/?hl=ko">Ken Jay Kim</a></p>
-
-                    <ul>
-                        <li>1위. flat white</li>
-                        <li>2위. Einspänner / cafe vienna</li>
-                        <li>3위. espresso</li>
-                    </ul>
-                </div>
-                <!-- /.blog-post -->
                 <div class="blog-post">
                     <h2 class="blog-post-title">김정호 바리스타의 신 메뉴</h2>
-                    <p class="blog-post-meta">October 21, 2019 by <a href="https://www.instagram.com/?hl=ko">Ken Jay Kim</a></p>
+                    <p class="blog-post-meta">October 21, 2019 by <a href="https://www.instagram.com/barista_jay_kim/?hl=ko">Ken Jay Kim</a></p>
                     <hr>
                     <ul>
                         <li>1위. <a>#</a></li>
@@ -217,53 +317,67 @@ December -->
                 <!-- /.blog-post -->
                 <div class="blog-post">
                     <h2 class="blog-post-title">퍼스널의 커피 강좌</h2>
-                    <p class="blog-post-meta">October 23, 2019 by <a href="https://www.instagram.com/?hl=ko">Jeong Doe, Ken Jay Kim</a></p>
+                    <p class="blog-post-meta">October 23, 2019 by
+                        <a href="https://www.instagram.com/nsadfhs/">Jeong Doe</a>,
+                        <a href="https://www.instagram.com/barista_jay_kim/?hl=ko"> Ken Jay Kim</a>
+                    </p>
                     <hr>
-                    <ul>
-                        <li>
-                            <p>라떼아트 초급</p>
-                            <video width="80%" controls>
-                                    <source src="./video/KakaoTalk_Video_20191023_1851_44_825.mp4" type="video/mp4">
-                                    Your browser does not support HTML5 video.
-                                  </video></li>
-                        <li>
-                            <p>라떼아트 해마 1</p>
-                            <video width="80%" controls>
-                                <source src="./video/KakaoTalk_Video_20191023_1426_07_496.mp4" type="video/mp4">
-                                Your browser does not support HTML5 video.
-                              </video></li>
-                        <li>
-                            <p>라떼아트 해마 2</p>
-                            <video width="80%" controls>
-                                <source src="./video/KakaoTalk_Video_20191023_1425_47_655.mp4" type="video/mp4">
-                                Your browser does not support HTML5 video.
-                              </video></li>
+                    <ul class="list-unstyled">
+                        <li class="etch-padding">
+                            <h2>라떼아트 초급</h2>
+                            <div class="etch-section">
+                                <video width="100%" controls>
+                                            <source src="./video/KakaoTalk_Video_20191023_1851_44_825.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                          </video>
+                            </div>
+                        </li>
+                        <li class="etch-padding">
+                            <h2>라떼아트 해마 1</h2>
+                            <div class="etch-section">
+                                <video width="100%" controls>
+                                            <source src="./video/KakaoTalk_Video_20191023_1426_07_496.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                          </video>
+                            </div>
+                        </li>
+                        <li class="etch-padding">
+                            <h2>라떼아트 해마 2</h2>
+                            <div class="etch-section">
+                                <video width="100%" controls>
+                                            <source src="./video/KakaoTalk_Video_20191023_1425_47_655.mp4" type="video/mp4">
+                                            Your browser does not support HTML5 video.
+                                          </video>
+                            </div>
+                        </li>
                     </ul>
                 </div>
 
                 <hr>
                 <div class="blog-post">
                     <h2 class="blog-post-title">세계 커피 소식</h2>
-                    <p class="blog-post-meta">!!!</p>
-                    <h5>슈나이더 네슬레 내한</h5>
-                    <p> 전 세계 커피 시장의 큰손 울프 마크 슈나이더 네슬레 회장이 올여름 5년 만에 한국을 찾는다. 13일 업계에 따르면 슈나이더 네슬레 회장은 오는 7월 한국을 방문할 예정이다. 네슬레코리아 관계자는 "슈나이더 회장이 다음 달 한국 시장 상황을 파악하기 위해 방한한다"며 "구체적인 일정과 방한 목적은 비공개 방침"이라고 말했다.
-                    </p>
-                    <p>출처 : 연합인포맥스(http://news.einfomax.co.kr)</p>
-                    <hr>
-                    <h5>세계 커피의 날</h5>
-                    <p>10월1일은 세계 커피의 날이다. 국제커피기구는 2015년부터 이날을 공식적인 커피의 날로 정해 기념하고 있다. 세계 최대 커피 산지인 남아메리카와 아프리카에서 9월에 수확을 마치기 때문에 그 다음달인 10월이 커피의 신년이라는 의미에서다. </p>
-                    <p>출처 : MNB(http://mnb.moneys.mt.co.kr/mnbview.php?no=2019093014268010834&code=&MGSMN&ref=https%3A%2F%2Fwww.google.com)</p>
-                    <hr>
-                    <h5>전주연 바리스타</h5>
-                    <p>최근 가장 즐거운 뉴스를 꼽으라면 `세계 바리스타 대회 1위`를 차지한 전주연 바리스타의 소식일 것이다. 전주연 바리스타는 결승전에서 `탄수화물이 커피의 향미에 미치는 영향`이라는 주제로 커피의 단맛에 과학적으로 접근했다. 눈에 띄는 것은 `젖산 발효(Lactic Acid Fermentation)`라고 칭한 무산소 발효 과정을 거친 콜롬비아 원두를 사용한 것이었다.</p>
-                    <p>출처 : 매일경제(https://www.mk.co.kr/news/economy/view/2019/05/303794/)</p>
-                    <hr>
-                    <h5>도쿄 팝업 스토어</h5>
-                    <p>카페라는 공간의 변화를 혁명적으로 준 사건. 단순히 커피와 디저트 판매를 넘어 쇼핑몰, 가전, 서점, 공연장 등등으로 변모시켜 소비자가 원하는 쇼핑트렌드에 맞춰 탈바꿈한 것입니다. 대표적으로, 도쿄의 스타벅스 팝업 스토어는 2012년에 개장한 일본의 한 카페입니다. 겉에서 봤을때는 카페가 아닌 서점과도 같은 외관을 하고 있는데요. 인테리어와 분위기부터 주문방법까지 모든 것이 독특합니다.</p>
-                    <p>출처 : 네이버 엄지척 블로그 (https://m.blog.naver.com/jongscokr/221394574144)</p>
-                    <h5></h5>
-                    <p></p>
-
+                    <p class="blog-post-meta">
+                        <a href="https://www.instagram.com/nsadfhs/">Jeong Doe</a></p>
+                    <div class="etch-container">
+                        <h5>슈나이더 네슬레 내한</h5>
+                        <p> 전 세계 커피 시장의 큰손 울프 마크 슈나이더 네슬레 회장이 올여름 5년 만에 한국을 찾는다. 13일 업계에 따르면 슈나이더 네슬레 회장은 오는 7월 한국을 방문할 예정이다. 네슬레코리아 관계자는 "슈나이더 회장이 다음 달 한국 시장 상황을 파악하기 위해 방한한다"며 "구체적인 일정과 방한 목적은 비공개 방침"이라고 말했다.
+                        </p>
+                        <p>출처 : 연합인포맥스(http://news.einfomax.co.kr)</p>
+                        <hr>
+                        <h5>세계 커피의 날</h5>
+                        <p>10월1일은 세계 커피의 날이다. 국제커피기구는 2015년부터 이날을 공식적인 커피의 날로 정해 기념하고 있다. 세계 최대 커피 산지인 남아메리카와 아프리카에서 9월에 수확을 마치기 때문에 그 다음달인 10월이 커피의 신년이라는 의미에서다. </p>
+                        <p>출처 : MNB(http://mnb.moneys.mt.co.kr/mnbview.php?no=2019093014268010834&code=&MGSMN&ref=https%3A%2F%2Fwww.google.com)</p>
+                        <hr>
+                        <h5>전주연 바리스타</h5>
+                        <p>최근 가장 즐거운 뉴스를 꼽으라면 `세계 바리스타 대회 1위`를 차지한 전주연 바리스타의 소식일 것이다. 전주연 바리스타는 결승전에서 `탄수화물이 커피의 향미에 미치는 영향`이라는 주제로 커피의 단맛에 과학적으로 접근했다. 눈에 띄는 것은 `젖산 발효(Lactic Acid Fermentation)`라고 칭한 무산소 발효 과정을 거친 콜롬비아 원두를 사용한 것이었다.</p>
+                        <p>출처 : 매일경제(https://www.mk.co.kr/news/economy/view/2019/05/303794/)</p>
+                        <hr>
+                        <h5>도쿄 팝업 스토어</h5>
+                        <p>카페라는 공간의 변화를 혁명적으로 준 사건. 단순히 커피와 디저트 판매를 넘어 쇼핑몰, 가전, 서점, 공연장 등등으로 변모시켜 소비자가 원하는 쇼핑트렌드에 맞춰 탈바꿈한 것입니다. 대표적으로, 도쿄의 스타벅스 팝업 스토어는 2012년에 개장한 일본의 한 카페입니다. 겉에서 봤을때는 카페가 아닌 서점과도 같은 외관을 하고 있는데요. 인테리어와 분위기부터 주문방법까지 모든 것이 독특합니다.</p>
+                        <p>출처 : 네이버 엄지척 블로그 (https://m.blog.naver.com/jongscokr/221394574144)</p>
+                        <h5></h5>
+                        <p></p>
+                    </div>
                 </div>
                 <!-- /.blog-post -->
 
@@ -284,14 +398,14 @@ December -->
                         <li>
                             <p>coming soon</p>
                         </li>
-                        <li><a href="#">Nov 29 2019 대구 커피 박람회</a></li>
-                        <li><a href="#">Nov 7 2019 서울 카페쇼</a></li>
-                        <li><a href="#">Oct 3 2019 강릉 커피 축제</a></li>
-                        <li><a href="#">Jun 19 2019 부산 커피쇼</a></li>
-                        <li><a href="#">Apr 11 2019 서울 커피 엑스포</a></li>
-                        <li><a href="#">Mar 21 2019 부산 카페쇼</a></li>
-                        <li><a href="#">Mar 08 2019 대전 카페쇼</a></li>
-                        <li><a href="#">Feb 29 2019 제주 카페 스타</a></li>
+                        <li><a href="http://www.coffeefair.co.kr/">Nov 29 2019 대구 커피 박람회</a></li>
+                        <li><a href="http://www.cafeshow.com/kor/">Nov 7 2019 서울 카페쇼</a></li>
+                        <li><a href="http://www.coffeefestival.net/">Oct 3 2019 강릉 커피 축제</a></li>
+                        <li><a href="http://www.coffeeshow.co.kr/new/">Jun 19 2019 부산 커피쇼</a></li>
+                        <li><a href="http://www.coffeexpo.co.kr/">Apr 11 2019 서울 커피 엑스포</a></li>
+                        <li><a href="https://busancafeshow.co.kr/">Mar 21 2019 부산 카페쇼</a></li>
+                        <li><a href="http://www.cfshow.kr/default/">Mar 08 2019 대전 카페쇼</a></li>
+                        <li><a href="https://www.jejucafeshow.com/">Feb 29 2019 제주 카페 스타</a></li>
                     </ol>
                 </div>
                 <div class="p-4">
@@ -314,12 +428,34 @@ December -->
                         <li><a href="#">바다다 Jul 9, 2018</a></li>
                         <li><a href="#">파구스소소 Jul 10, 2018</a></li>
                         <li><a href="#">풍림다방 Jul 13, 2018</a></li>
-
+                    </ol>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-italic">김정호 바리스타의 추천 원두</h4>
+                    <p class="blog-post-meta">February 23, 2019 by <a href="https://www.instagram.com/barista_jay_kim/?hl=ko">Ken Jay Kim</a></p>
+                    <ol class="list-unstyled mb-0">
+                        <li>1위.
+                            <a href="personal_shop.html"></a>
+                        </li>
+                        <li>2위.
+                            <a href="personal_shop.html"></a>
+                        </li>
+                        <li>3위.
+                            <a href="personal_shop.html"></a>
+                        </li>
+                    </ol>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-italic">정다운 바리스타의 추천 메뉴</h4>
+                    <p class="blog-post-meta">October 20, 2019 by <a href="https://www.instagram.com/nsadfhs">Jeong Doe</a></p>
+                    <ol class="list-unstyled mb-0">
+                        <li>1위. <a href="">flat white</a></li>
+                        <li>2위. <a href="">Einspänner / cafe vienna</a></li>
+                        <li>3위. <a href="">espresso</a></li>
                     </ol>
                 </div>
             </aside>
             <!-- /.blog-sidebar -->
-
         </div>
         <!-- /.row -->
 
@@ -328,7 +464,8 @@ December -->
     <footer class="etch-container etch-padding-64 etch-light-grey etch-center etch-opacity etch-xlarge" style="margin-top:128px">
         <i class="fa fa-facebook-official etch-hover-opacity"></i>
         <i class="fa fa-instagram etch-hover-opacity"></i>
-        <p class="etch-medium">Projected by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="etch-hover-text-green">Personal</a></p>
+        <p class="etch-medium">Projected by <a href="#" target="_blank" class="etch-hover-text-green">ETCH</a></p>
+        <p class="etch-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="etch-hover-text-green">w3.css</a></p>
         <a href="#">Back to top</a>
     </footer>
 
@@ -357,7 +494,23 @@ December -->
             document.getElementById("mySidebar").style.display = "none";
         }
     </script>
+    <script>
+        document.getElementsByClassName("tablink")[0].click();
 
+        function openMission(evt, missionName) {
+            var i, x, tablinks;
+            x = document.getElementsByClassName("mission");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < x.length; i++) {
+                tablinks[i].classList.remove("etch-light-grey");
+            }
+            document.getElementById(missionName).style.display = "block";
+            evt.currentTarget.classList.add("etch-light-grey");
+        }
+    </script>
 </body>
 
 </html>
